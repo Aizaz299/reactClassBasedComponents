@@ -1,21 +1,22 @@
 import React from 'react'
 import faker from 'faker'
 
-const CommentDetail = () => {
+const CommentDetail = (props) => {  //child prop
+  //console.log(props);  
 return (
 <div className="comments">
        <a href="/" className="avatar"> 
-       <img alt="avatar" src={faker.image.avatar()}/> 
+       <img alt="avatar" src={props.img}/> 
         </a>
         <div className="content">
           <a href="/" className="author">
-            Aizaz Ur Rehman
+            {props.author}
           </a>
           <div className="metadata">
-            <span className="date"> today at 6:00 pm</span>
+            <span className="date"> {props.time}</span>
           </div>
           <div className="text">
-            React is going well so far.
+            {props.comment}
           </div>
         </div>
      </div>
