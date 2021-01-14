@@ -1,10 +1,9 @@
 import React from 'react'
-import faker from 'faker'
 
 const CommentDetail = (props) => {  //child prop
   //console.log(props);  
 return (
-<div className="comments">
+<div className="comments" border="2px soild black">
        <a href="/" className="avatar"> 
        <img alt="avatar" src={props.img}/> 
         </a>
